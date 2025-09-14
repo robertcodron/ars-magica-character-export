@@ -1,0 +1,81 @@
+{
+  "name": "ars-magica-character-export",
+  "title": "Ars Magica - Export de Personnage",
+  "description": "Module permettant d'exporter les informations complètes d'un personnage Ars Magica en PDF",
+  "version": "1.0.0",
+  "minimumCoreVersion": "13",
+  "compatibleCoreVersion": "13",
+  "author": "Assistant Claude",
+  "authors": [
+    {
+      "name": "Assistant Claude",
+      "email": "claude@anthropic.com"
+    }
+  ],
+  "esmodules": [
+    "scripts/character-export.js"
+  ],
+  "styles": [
+    "styles/character-export.css"
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "system": "ars-magica",
+  "url": "https://github.com/your-repo/ars-magica-character-export",
+  "manifest": "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.json",
+  "download": "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.zip",
+  "readme": "README.md",
+  "bugs": "https://github.com/your-repo/ars-magica-character-export/issues",
+  "changelog": "https://github.com/your-repo/ars-magica-character-export/releases",
+  "license": "MIT",
+  "keywords": [
+    "foundry-vtt",
+    "ars-magica",
+    "character-export",
+    "pdf",
+    "rpg",
+    "tabletop"
+  ],
+  "media": [
+    {
+      "type": "cover",
+      "url": "https://raw.githubusercontent.com/your-repo/ars-magica-character-export/main/docs/cover.jpg"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/your-repo/ars-magica-character-export/main/docs/screenshot1.jpg"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/your-repo/ars-magica-character-export/main/docs/screenshot2.jpg"
+    }
+  ],
+  "flags": {
+    "allowBugReporter": true,
+    "conflicts": [],
+    "deprecated": false,
+    "library": false,
+    "protected": false,
+    "packs": []
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "ars-magica",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.0.0",
+          "verified": "1.0.0"
+        }
+      }
+    ],
+    "requires": [],
+    "conflicts": [],
+    "recommends": []
+  }
+}

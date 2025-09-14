@@ -1,0 +1,99 @@
+{
+  "name": "ars-magica-character-export",
+  "title": "Ars Magica - Export de Personnage",
+  "description": "Module permettant d'exporter les informations complètes d'un personnage Ars Magica en PDF",
+  "version": "1.0.0",
+  "minimumCoreVersion": "13",
+  "compatibleCoreVersion": "13",
+  "author": "Assistant Claude",
+  "authors": [
+    {
+      "name": "Assistant Claude",
+      "email": "claude@anthropic.com"
+    }
+  ],
+  "esmodules": [
+    "scripts/character-export.js"
+  ],
+  "styles": [
+    "styles/character-export.css"
+  ],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    }
+  ],
+  "system": "ars-magica",
+  "url": "https://github.com/your-repo/ars-magica-character-export",
+  "manifest": "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.json",
+  "download": "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.zip",
+  "readme": "README.md",
+  "bugs": "https://github.com/your-repo/ars-magica-character-export/issues",
+  "changelog": "https://github.com/your-repo/ars-magica-character-export/releases",
+  "license": "MIT",
+  "keywords": [
+    "foundry-vtt",
+    "ars-magica",
+    "character-export",
+    "pdf",
+    "rpg",
+    "tabletop"
+  ],
+  "flags": {
+    "allowBugReporter": true,
+    "conflicts": [],
+    "deprecated": false,
+    "library": false,
+    "protected": false,
+    "packs": []
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "ars-magica",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.0.0",
+          "verified": "1.0.0"
+        }
+      }
+    ],
+    "requires": [],
+    "conflicts": [],
+    "recommends": []
+  },
+  "media": [
+    {
+      "type": "cover",
+      "url": "https://raw.githubusercontent.com/your-repo/ars-magica-character-export/main/docs/cover.jpg"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/your-repo/ars-magica-character-export/main/docs/screenshot1.jpg"
+    },
+    {
+      "type": "screenshot",
+      "url": "https://raw.githubusercontent.com/your-repo/ars-magica-character-export/main/docs/screenshot2.jpg"
+    }
+  ],
+  "installation": {
+    "instructions": "1. Téléchargez le module depuis GitHub\n2. Dans Foundry VTT, allez dans Configuration > Modules\n3. Cliquez sur 'Install Module'\n4. Sélectionnez le fichier ZIP téléchargé\n5. Activez le module dans votre monde",
+    "troubleshooting": "Si vous rencontrez des problèmes:\n1. Vérifiez que vous utilisez Foundry VTT v13+\n2. Vérifiez que le système Ars Magica est installé\n3. Consultez la documentation sur GitHub\n4. Créez une issue si le problème persiste"
+  },
+  "features": [
+    "Export complet des personnages Ars Magica",
+    "Interface utilisateur intégrée",
+    "Génération de fichiers HTML formatés",
+    "Support des traductions françaises",
+    "Tests automatisés",
+    "Documentation complète"
+  ],
+  "compatibility": {
+    "foundry": "13.0.0",
+    "system": "ars-magica",
+    "minimum": "13.0.0",
+    "verified": "13.0.0"
+  }
+}

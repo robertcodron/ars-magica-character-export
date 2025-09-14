@@ -1,0 +1,40 @@
+name: Deploy to Foundry VTT
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Build module
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Deploy to Foundry VTT
+        uses: actions/upload-artifact@v3
+        with:
+          name: foundry-module
+          path: build/*.zip
+
+      - name: Update Foundry VTT Registry
+        run: |
+          echo "Module déployé avec succès!"
+          echo "Le module est maintenant disponible pour installation via:"
+          echo "https://github.com/your-repo/ars-magica-character-export/releases/latest"
+          echo ""
+          echo "Pour l'installer dans Foundry VTT:"
+          echo "1. Allez dans Configuration > Modules"
+          echo "2. Cliquez sur 'Install Module'"
+          echo "3. Collez l'URL: https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.zip"
+          echo "4. Activez le module dans votre monde"

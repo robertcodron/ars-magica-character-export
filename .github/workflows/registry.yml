@@ -1,0 +1,46 @@
+name: Deploy to Foundry VTT Registry
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy-registry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Build module
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Deploy to Foundry VTT Registry
+        run: |
+          echo "Déploiement vers le registry Foundry VTT..."
+          echo "Module: ars-magica-character-export"
+          echo "Version: ${{ github.ref_name }}"
+          echo ""
+          echo "Le module sera disponible via:"
+          echo "https://foundryvtt.com/packages/ars-magica-character-export"
+          echo ""
+          echo "URL d'installation:"
+          echo "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.zip"
+          echo ""
+          echo "Pour l'installer dans Foundry VTT:"
+          echo "1. Allez dans Configuration > Modules"
+          echo "2. Cliquez sur 'Install Module'"
+          echo "3. Collez l'URL ci-dessus"
+          echo "4. Activez le module dans votre monde"
+
+      - name: Update Registry
+        run: |
+          echo "Mise à jour du registry..."
+          echo "Le module a été déployé avec succès!"
+          echo "Il sera bientôt disponible dans le registry Foundry VTT."

@@ -1,0 +1,176 @@
+{
+  "name": "Marcus Aurelius",
+  "type": "character",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "characteristics": {
+      "intelligence": { "value": 0, "label": "Intelligence" },
+      "perception": { "value": 0, "label": "Perception" },
+      "strength": { "value": 0, "label": "Force" },
+      "stamina": { "value": 0, "label": "Endurance" },
+      "presence": { "value": 0, "label": "Présence" },
+      "communication": { "value": 0, "label": "Communication" },
+      "dexterity": { "value": 0, "label": "Dextérité" },
+      "quickness": { "value": 0, "label": "Rapidité" }
+    },
+    "abilities": {
+      "academic": { "value": 0, "label": "Académique" },
+      "animal": { "value": 0, "label": "Animal" },
+      "area": { "value": 0, "label": "Région" },
+      "athletic": { "value": 0, "label": "Athlétique" },
+      "awareness": { "value": 0, "label": "Conscience" },
+      "bargain": { "value": 0, "label": "Marchandage" },
+      "charm": { "value": 0, "label": "Charme" },
+      "chirurgy": { "value": 0, "label": "Chirurgie" },
+      "civil": { "value": 0, "label": "Civil" },
+      "concentration": { "value": 0, "label": "Concentration" },
+      "craft": { "value": 0, "label": "Artisanat" },
+      "folk": { "value": 0, "label": "Populaire" },
+      "guile": { "value": 0, "label": "Ruse" },
+      "intrigue": { "value": 0, "label": "Intrigue" },
+      "leadership": { "value": 0, "label": "Commandement" },
+      "legerdemain": { "value": 0, "label": "Prestidigitation" },
+      "magic": { "value": 0, "label": "Magie" },
+      "medicine": { "value": 0, "label": "Médecine" },
+      "music": { "value": 0, "label": "Musique" },
+      "occult": { "value": 0, "label": "Occulte" },
+      "profession": { "value": 0, "label": "Profession" },
+      "ride": { "value": 0, "label": "Équitation" },
+      "stealth": { "value": 0, "label": "Discrétion" },
+      "survival": { "value": 0, "label": "Survie" },
+      "swim": { "value": 0, "label": "Natation" },
+      "teaching": { "value": 0, "label": "Enseignement" },
+      "track": { "value": 0, "label": "Pistage" },
+      "war": { "value": 0, "label": "Guerre" }
+    },
+    "arts": {
+      "creo": { "value": 0, "label": "Creo" },
+      "intellego": { "value": 0, "label": "Intellego" },
+      "muto": { "value": 0, "label": "Muto" },
+      "perdo": { "value": 0, "label": "Perdo" },
+      "rego": { "value": 0, "label": "Rego" },
+      "animal": { "value": 0, "label": "Animal" },
+      "aquam": { "value": 0, "label": "Aquam" },
+      "auram": { "value": 0, "label": "Auram" },
+      "corpus": { "value": 0, "label": "Corpus" },
+      "herbam": { "value": 0, "label": "Herbam" },
+      "ignem": { "value": 0, "label": "Ignem" },
+      "imaginem": { "value": 0, "label": "Imaginem" },
+      "mentem": { "value": 0, "label": "Mentem" },
+      "terram": { "value": 0, "label": "Terram" },
+      "vim": { "value": 0, "label": "Vim" }
+    },
+    "spells": {
+      "spell1": {
+        "name": "Bouclier de Vent",
+        "level": 15,
+        "technique": "Rego",
+        "form": "Auram",
+        "description": "Crée un bouclier de vent qui protège contre les projectiles",
+        "range": "Personnel",
+        "duration": "Concentration",
+        "target": "Personnel"
+      },
+      "spell2": {
+        "name": "Lueur Magique",
+        "level": 5,
+        "technique": "Creo",
+        "form": "Ignem",
+        "description": "Crée une source de lumière magique",
+        "range": "Personnel",
+        "duration": "Soleil",
+        "target": "Personnel"
+      }
+    },
+    "virtues": {
+      "virtue1": {
+        "name": "Gift",
+        "description": "Le personnage possède le Don magique"
+      },
+      "virtue2": {
+        "name": "Life Boost",
+        "description": "Augmente la résistance du personnage"
+      }
+    },
+    "flaws": {
+      "flaw1": {
+        "name": "Twilight Prone",
+        "description": "Susceptible de tomber dans le Crépuscule"
+      }
+    },
+    "personal": {
+      "age": 25,
+      "birthYear": 1195,
+      "covenant": "Covenant de Tremere",
+      "house": "Tremere",
+      "gender": "Masculin",
+      "nationality": "Français",
+      "religion": "Chrétien"
+    },
+    "covenant": {
+      "name": "Covenant de Tremere",
+      "location": "Provence, France",
+      "type": "Mystagogue",
+      "season": "Printemps"
+    },
+    "inventory": {
+      "items": [
+        {
+          "name": "Bâton de Magie",
+          "type": "weapon",
+          "description": "Bâton en bois de chêne avec des runes gravées"
+        },
+        {
+          "name": "Grimoire",
+          "type": "book",
+          "description": "Livre de sorts personnel"
+        },
+        {
+          "name": "Bourse d'argent",
+          "type": "money",
+          "description": "Contient 50 deniers"
+        }
+      ]
+    },
+    "notes": "Marcus est un jeune mage de la Maison Tremere, spécialisé dans les arts de l'air et du feu. Il a rejoint le Covenant de Tremere récemment et cherche à perfectionner ses compétences magiques."
+  },
+  "items": [
+    {
+      "name": "Bâton de Magie",
+      "type": "weapon",
+      "system": {
+        "description": "Bâton en bois de chêne avec des runes gravées",
+        "damage": "1d6+1",
+        "range": "Contact"
+      }
+    },
+    {
+      "name": "Grimoire",
+      "type": "book",
+      "system": {
+        "description": "Livre de sorts personnel",
+        "pages": 100,
+        "spells": ["Bouclier de Vent", "Lueur Magique"]
+      }
+    }
+  ],
+  "effects": [
+    {
+      "name": "Bouclier de Vent",
+      "icon": "icons/svg/shield.svg",
+      "system": {
+        "duration": "concentration",
+        "description": "Protection contre les projectiles"
+      }
+    }
+  ],
+  "metadata": {
+    "id": "example-character-001",
+    "folder": "Personnages Joueurs",
+    "created": 1640995200000,
+    "modified": 1640995200000,
+    "ownership": {
+      "example-user-001": 3
+    }
+  }
+}

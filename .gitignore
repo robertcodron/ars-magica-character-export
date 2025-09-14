@@ -1,0 +1,61 @@
+# Fichiers temporaires
+*.tmp
+*.temp
+*~
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+
+# Fichiers de log
+*.log
+logs/
+
+# Dossiers de dépendances
+node_modules/
+npm-debug.log*
+
+# Fichiers de configuration locale
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Fichiers de cache
+.cache/
+.parcel-cache/
+
+# Fichiers de build
+dist/
+build/
+out/
+
+# Fichiers de test
+coverage/
+.nyc_output/
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers de déploiement
+*.zip
+*.tar.gz
+*.rar
+
+# Fichiers de documentation générés
+docs/_build/
+docs/build/
+
+# Fichiers de test temporaires
+test-results/
+test-output/

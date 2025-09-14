@@ -1,0 +1,67 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Build module
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            ## Changelog
+
+            Consultez le [CHANGELOG.md](CHANGELOG.md) pour les détails des modifications.
+
+            ## Installation
+
+            1. Téléchargez le fichier ZIP ci-dessous
+            2. Dans Foundry VTT, allez dans Configuration > Modules
+            3. Cliquez sur 'Install Module'
+            4. Sélectionnez le fichier ZIP téléchargé
+            5. Activez le module dans votre monde
+
+            ## Utilisation
+
+            1. Ouvrez la fiche de votre personnage
+            2. Allez dans l'onglet "Description" ou "Détails"
+            3. Cliquez sur le bouton "Exporter en PDF"
+            4. Le fichier HTML sera téléchargé
+            5. Ouvrez le fichier dans votre navigateur et imprimez-le en PDF
+
+            ## Support
+
+            Pour signaler des bugs ou demander des fonctionnalités, veuillez créer une issue sur GitHub.
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./build/ars-magica-character-export-v${{ github.ref_name }}.zip
+          asset_name: ars-magica-character-export-v${{ github.ref_name }}.zip
+          asset_content_type: application/zip

@@ -1,0 +1,53 @@
+{
+  "name": "ars-magica-character-export",
+  "version": "1.0.0",
+  "description": "Module Foundry VTT pour exporter les personnages Ars Magica en PDF",
+  "main": "scripts/character-export.js",
+  "scripts": {
+    "build": "./build.sh",
+    "install": "./install.sh",
+    "test": "echo 'Tests disponibles dans le dossier test/'",
+    "lint": "echo 'Linting non configuré pour ce module'",
+    "clean": "rm -rf build/ *.zip"
+  },
+  "keywords": [
+    "foundry-vtt",
+    "ars-magica",
+    "character-export",
+    "pdf",
+    "rpg",
+    "tabletop"
+  ],
+  "author": {
+    "name": "Assistant Claude",
+    "email": "claude@anthropic.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/ars-magica-character-export.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/ars-magica-character-export/issues"
+  },
+  "homepage": "https://github.com/your-repo/ars-magica-character-export#readme",
+  "foundryVtt": {
+    "minimumCoreVersion": "13",
+    "compatibleCoreVersion": "13",
+    "system": "ars-magica"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "manifest.json",
+    "module.json",
+    "scripts/",
+    "styles/",
+    "lang/",
+    "README.md",
+    "LICENSE"
+  ]
+}

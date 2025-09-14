@@ -1,0 +1,66 @@
+{
+  "ARS_MAGICA_CHARACTER_EXPORT": {
+    "MODULE_NAME": "Ars Magica - Export de Personnage",
+    "MODULE_DESCRIPTION": "Module permettant d'exporter les informations complètes d'un personnage Ars Magica en PDF",
+    
+    "BUTTONS": {
+      "EXPORT_PDF": "Exporter en PDF",
+      "EXPORTING": "Export en cours...",
+      "EXPORT_SUCCESS": "Export réussi !",
+      "EXPORT_ERROR": "Erreur lors de l'export"
+    },
+    
+    "MESSAGES": {
+      "EXPORT_START": "Génération du PDF en cours...",
+      "EXPORT_SUCCESS": "PDF généré avec succès !",
+      "EXPORT_ERROR": "Erreur lors de la génération du PDF",
+      "CHARACTER_NOT_FOUND": "Personnage introuvable !",
+      "NO_PERMISSION": "Vous n'avez pas les permissions nécessaires pour exporter ce personnage",
+      "DOWNLOAD_READY": "Fichier HTML téléchargé ! Vous pouvez l'ouvrir dans votre navigateur et l'imprimer en PDF."
+    },
+    
+    "SECTIONS": {
+      "EXPORT": "Export de Personnage",
+      "GENERAL_INFO": "Informations Générales",
+      "CHARACTERISTICS": "Caractéristiques",
+      "ABILITIES": "Compétences",
+      "SPELLS": "Sorts",
+      "ARTS": "Arts",
+      "VIRTUES": "Vertus",
+      "FLAWS": "Défauts",
+      "INVENTORY": "Inventaire",
+      "NOTES": "Notes",
+      "METADATA": "Métadonnées"
+    },
+    
+    "FIELDS": {
+      "NAME": "Nom",
+      "TYPE": "Type",
+      "PLAYER": "Joueur",
+      "ROLE": "Rôle",
+      "FOLDER": "Dossier",
+      "CREATED": "Créé le",
+      "MODIFIED": "Modifié le",
+      "OWNERS": "Propriétaires",
+      "LEVEL": "Niveau",
+      "TECHNIQUE": "Technique",
+      "FORM": "Forme",
+      "DESCRIPTION": "Description",
+      "SPECIALIZATION": "Spécialisation"
+    },
+    
+    "HELP": {
+      "EXPORT_DESCRIPTION": "Cliquez pour télécharger un PDF complet de votre personnage",
+      "EXPORT_TIP": "Le fichier sera téléchargé au format HTML que vous pourrez ouvrir dans votre navigateur et imprimer en PDF",
+      "PERMISSIONS_INFO": "Seul le propriétaire du personnage peut l'exporter"
+    },
+    
+    "NOTIFICATIONS": {
+      "TITLE": "Ars Magica Export",
+      "SUCCESS": "Succès",
+      "ERROR": "Erreur",
+      "WARNING": "Attention",
+      "INFO": "Information"
+    }
+  }
+}

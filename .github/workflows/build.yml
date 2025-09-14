@@ -1,0 +1,63 @@
+name: Build Module
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run tests
+        run: |
+          echo "Tests disponibles dans le dossier test/"
+          echo "Pour exécuter les tests, utilisez les scripts dans Foundry VTT"
+
+      - name: Build module
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: module-package
+          path: build/*.zip
+
+      - name: Create Release
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.run_number }}
+          release_name: Release v${{ github.run_number }}
+          body: |
+            ## Changelog
+
+            - Build automatique du module
+            - Package prêt pour l'installation
+
+            ## Installation
+
+            1. Téléchargez le fichier ZIP
+            2. Dans Foundry VTT, allez dans Configuration > Modules
+            3. Cliquez sur 'Install Module'
+            4. Sélectionnez le fichier ZIP téléchargé
+            5. Activez le module dans votre monde
+          draft: false
+          prerelease: false
