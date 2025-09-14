@@ -28,7 +28,7 @@
   ],
   "system": "ars-magica",
   "url": "https://github.com/robertcodron/ars-magica-character-export",
-  "manifest": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/module.json",
+  "manifest": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/manifest.json",
   "download": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/ars-magica-character-export-v1.0.0.zip",
   "readme": "README.md",
   "bugs": "https://github.com/robertcodron/ars-magica-character-export/issues",
