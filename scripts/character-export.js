@@ -44,7 +44,7 @@ class ArsMagicaCharacterExport {
       html.find('.tab[data-tab="details"] .form-group').last(),
       html.find('.tab[data-tab="main"] .form-group').last(),
       html.find('.sheet-body .form-group').last(),
-      html.find('.sheet-content .form-group').last()
+      html.find('.sheet-content .form-group').last(),
     ];
 
     for (const container of possibleContainers) {
@@ -69,7 +69,7 @@ class ArsMagicaCharacterExport {
       // Si aucun conteneur trouvé, ajouter le bouton dans le header ou footer
       const header = html.find('.sheet-header');
       const footer = html.find('.sheet-footer');
-      
+
       if (header.length > 0) {
         header.append(`
           <div class="ars-magica-export-header">

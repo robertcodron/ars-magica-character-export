@@ -28,6 +28,6 @@
   ],
   "system": "ars-magica",
   "url": "https://github.com/robertcodron/ars-magica-character-export",
-  "manifest": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/manifest.json",
+  "manifest": "https://raw.githubusercontent.com/robertcodron/ars-magica-character-export/main/manifest.json",
   "download": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/ars-magica-character-export-v1.0.0.zip"
 }
