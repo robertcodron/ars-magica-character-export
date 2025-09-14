@@ -126,13 +126,66 @@
 
 /* Style pour l'intégration dans les fiches Ars Magica */
 .ars-magica-sheet .export-character-btn {
-    background: linear-gradient(135deg, #8b4513, #a0522d);
-    border: 2px solid #654321;
+  background: linear-gradient(135deg, #8b4513, #a0522d);
+  border: 2px solid #654321;
 }
 
 .ars-magica-sheet .export-character-btn:hover {
-    background: linear-gradient(135deg, #a0522d, #8b4513);
-    border-color: #8b4513;
+  background: linear-gradient(135deg, #a0522d, #8b4513);
+  border-color: #8b4513;
+}
+
+/* Styles pour les différentes positions du bouton */
+.ars-magica-export-section {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 4px solid #4a90e2;
+}
+
+.ars-magica-export-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.ars-magica-export-footer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.ars-magica-export-floating {
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(74, 144, 226, 0.9);
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ars-magica-export-floating .export-character-btn {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
+  font-weight: bold;
+}
+
+.ars-magica-export-floating .export-character-btn:hover {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
 }
 
 /* Style pour les onglets personnalisés */

@@ -32,48 +32,72 @@ class ArsMagicaCharacterExport {
     // Vérifier que l'utilisateur est propriétaire du personnage
     if (!sheet.actor.isOwner) return;
 
-    // Trouver la section description ou créer une nouvelle section
-    let descriptionSection = html.find('.tab[data-tab="description"]');
-    if (descriptionSection.length === 0) {
-      descriptionSection = html.find('.tab[data-tab="details"]');
+    // Vérifier que le bouton n'existe pas déjà
+    if (html.find('.export-character-btn').length > 0) return;
+
+    // Chercher un endroit approprié pour ajouter le bouton sans modifier la structure existante
+    let targetContainer = null;
+
+    // Essayer de trouver une section existante où ajouter le bouton
+    const possibleContainers = [
+      html.find('.tab[data-tab="description"] .form-group').last(),
+      html.find('.tab[data-tab="details"] .form-group').last(),
+      html.find('.tab[data-tab="main"] .form-group').last(),
+      html.find('.sheet-body .form-group').last(),
+      html.find('.sheet-content .form-group').last()
+    ];
+
+    for (const container of possibleContainers) {
+      if (container.length > 0) {
+        targetContainer = container;
+        break;
+      }
     }
 
-    if (descriptionSection.length === 0) {
-      // Créer une nouvelle section si nécessaire
-      const tabs = html.find('.sheet-tabs');
-      if (tabs.length > 0) {
-        tabs.append(
-          '<a class="item" data-tab="description" title="Description"><i class="fas fa-book"></i> Description</a>'
-        );
-
-        const tabContent = html.find('.sheet-body');
-        if (tabContent.length > 0) {
-          tabContent.append(`
-            <div class="tab" data-tab="description">
-              <div class="form-group">
-                <label>Export de Personnage</label>
-                <button type="button" class="export-character-btn" data-actor-id="${sheet.actor.id}">
-                  <i class="fas fa-download"></i> Exporter en PDF
-                </button>
-                <p class="notes">Cliquez pour télécharger un PDF complet de votre personnage</p>
-              </div>
-            </div>
-          `);
-        }
-      }
+    // Si on trouve un conteneur, ajouter le bouton après
+    if (targetContainer && targetContainer.length > 0) {
+      targetContainer.after(`
+        <div class="form-group ars-magica-export-section">
+          <label>Export de Personnage</label>
+          <button type="button" class="export-character-btn" data-actor-id="${sheet.actor.id}">
+            <i class="fas fa-download"></i> Exporter en PDF
+          </button>
+          <p class="notes">Cliquez pour télécharger un PDF complet de votre personnage</p>
+        </div>
+      `);
     } else {
-      // Ajouter le bouton à la section description existante
-      const formGroups = descriptionSection.find('.form-group');
-      if (formGroups.length > 0) {
-        formGroups.last().after(`
-          <div class="form-group">
-            <label>Export de Personnage</label>
+      // Si aucun conteneur trouvé, ajouter le bouton dans le header ou footer
+      const header = html.find('.sheet-header');
+      const footer = html.find('.sheet-footer');
+      
+      if (header.length > 0) {
+        header.append(`
+          <div class="ars-magica-export-header">
             <button type="button" class="export-character-btn" data-actor-id="${sheet.actor.id}">
               <i class="fas fa-download"></i> Exporter en PDF
             </button>
-            <p class="notes">Cliquez pour télécharger un PDF complet de votre personnage</p>
           </div>
         `);
+      } else if (footer.length > 0) {
+        footer.prepend(`
+          <div class="ars-magica-export-footer">
+            <button type="button" class="export-character-btn" data-actor-id="${sheet.actor.id}">
+              <i class="fas fa-download"></i> Exporter en PDF
+            </button>
+          </div>
+        `);
+      } else {
+        // Dernier recours : ajouter au début du body
+        const body = html.find('.sheet-body, .sheet-content');
+        if (body.length > 0) {
+          body.prepend(`
+            <div class="ars-magica-export-floating">
+              <button type="button" class="export-character-btn" data-actor-id="${sheet.actor.id}">
+                <i class="fas fa-download"></i> Exporter en PDF
+              </button>
+            </div>
+          `);
+        }
       }
     }
   }
