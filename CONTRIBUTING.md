@@ -6,7 +6,7 @@ Merci de votre intérêt à contribuer au module Ars Magica Character Export ! C
 
 ### Signaler un Bug
 
-1. Vérifiez d'abord que le bug n'a pas déjà été signalé dans les [issues existantes](https://github.com/your-repo/ars-magica-character-export/issues)
+1. Vérifiez d'abord que le bug n'a pas déjà été signalé dans les [issues existantes](https://github.com/robertcodron/ars-magica-character-export/issues)
 2. Créez une nouvelle issue en utilisant le template "Bug report"
 3. Fournissez toutes les informations demandées dans le template
 4. Incluez les logs de la console si possible
@@ -20,7 +20,7 @@ Merci de votre intérêt à contribuer au module Ars Magica Character Export ! C
 
 ### Contribuer au Code
 
-1. Fork le repository
+1. Fork le repository : https://github.com/robertcodron/ars-magica-character-export
 2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/amazing-feature`)
 3. Committez vos changements (`git commit -m 'Add some amazing feature'`)
 4. Push vers la branche (`git push origin feature/amazing-feature`)

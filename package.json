@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-repo/ars-magica-character-export.git"
+    "url": "https://github.com/robertcodron/ars-magica-character-export.git"
   },
   "bugs": {
-    "url": "https://github.com/your-repo/ars-magica-character-export/issues"
+    "url": "https://github.com/robertcodron/ars-magica-character-export/issues"
   },
-  "homepage": "https://github.com/your-repo/ars-magica-character-export#readme",
+  "homepage": "https://github.com/robertcodron/ars-magica-character-export#readme",
   "foundryVtt": {
     "minimumCoreVersion": "13",
     "compatibleCoreVersion": "13",

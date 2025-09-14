@@ -81,7 +81,7 @@ Vous pouvez modifier le fichier `character-export.js` pour :
 
 ## Support
 
-Pour signaler des bugs ou demander des fonctionnalités, veuillez créer une issue sur le repository GitHub.
+Pour signaler des bugs ou demander des fonctionnalités, veuillez créer une issue sur le repository GitHub : https://github.com/robertcodron/ars-magica-character-export/issues
 
 ## Licence
 

@@ -27,10 +27,10 @@
     }
   ],
   "system": "ars-magica",
-  "url": "https://github.com/your-repo/ars-magica-character-export",
-  "manifest": "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.json",
-  "download": "https://github.com/your-repo/ars-magica-character-export/releases/latest/download/module.zip",
+  "url": "https://github.com/robertcodron/ars-magica-character-export",
+  "manifest": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/module.json",
+  "download": "https://github.com/robertcodron/ars-magica-character-export/releases/latest/download/ars-magica-character-export-v1.0.0.zip",
   "readme": "README.md",
-  "bugs": "https://github.com/your-repo/ars-magica-character-export/issues",
-  "changelog": "https://github.com/your-repo/ars-magica-character-export/releases"
+  "bugs": "https://github.com/robertcodron/ars-magica-character-export/issues",
+  "changelog": "https://github.com/robertcodron/ars-magica-character-export/releases"
 }
